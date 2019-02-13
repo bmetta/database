@@ -1,0 +1,46 @@
+Products																					  Manufacturers;
++------+-----------------+-------+--------------+		+------+-----------------+
+| Code | Name            | Price | Manufacturer |		| Code | Name            |
++------+-----------------+-------+--------------+		+------+-----------------+
+|    1 | Hard drive      |   240 |            5 |		|    1 | Sony            |
+|    2 | Memory          |   120 |            6 |		|    2 | Creative Labs   |
+|    3 | ZIP drive       |   150 |            4 |		|    3 | Hewlett-Packard |
+|    4 | Floppy disk     |     5 |            6 |		|    4 | Iomega          |
+|    5 | Monitor         |   240 |            1 |		|    5 | Fujitsu         |
+|    6 | DVD drive       |   180 |            2 |		|    6 | Winchester      |
+|    7 | CD drive        |    90 |            2 |		+------+-----------------+
+|    8 | Printer         |   270 |            3 |
+|    9 | Toner cartridge |    66 |            3 |
+|   10 | DVD burner      |   180 |            2 |
++------+-----------------+-------+--------------+
+
+
+1.16
+max_price_mapping
++-----------------+-------+
+| Name            | price |
++-----------------+-------+
+| Sony            |   240 |
+| Creative Labs   |   180 |
+| Hewlett-Packard |   270 |
+| Iomega          |   150 |
+| Fujitsu         |   240 |
+| Winchester      |   120 |
++-----------------+-------+
+
+products_with_manu_name
++------+-----------------+-------+--------------+-----------------+
+| Code | Name            | Price | Manufacturer | manu_name       |
++------+-----------------+-------+--------------+-----------------+
+|    5 | Monitor         |   240 |            1 | Sony            |
+|    6 | DVD drive       |   180 |            2 | Creative Labs   |
+|    7 | CD drive        |    90 |            2 | Creative Labs   |
+|   10 | DVD burner      |   180 |            2 | Creative Labs   |
+|    8 | Printer         |   270 |            3 | Hewlett-Packard |
+|    9 | Toner cartridge |    66 |            3 | Hewlett-Packard |
+|    3 | ZIP drive       |   150 |            4 | Iomega          |
+|    1 | Hard drive      |   240 |            5 | Fujitsu         |
+|    2 | Memory          |   120 |            6 | Winchester      |
+|    4 | Floppy disk     |     5 |            6 | Winchester      |
++------+-----------------+-------+--------------+-----------------+
+
