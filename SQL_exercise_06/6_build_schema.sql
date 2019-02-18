@@ -1,3 +1,7 @@
+drop table if exists AssignedTo;
+drop table if exists Scientists;
+drop table if exists Projects;
+
 create table Scientists (
   SSN int,
   Name Char(30) not null,

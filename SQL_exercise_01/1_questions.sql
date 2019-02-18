@@ -69,7 +69,18 @@ SELECT Name, Price
 	LIMIT 1;
 
 -- 1.16 Select the name of each manufacturer along with the name and price of its most expensive product.
-
+select manname, product, maxprice
+from 
+		(select Price, Manufacturer, m.Name as manname, p.name as product
+		 from Products p
+		 join Manufacturers m
+		 on p.Manufacturer = m.Code) manf
+	join 
+		(select Manufacturer, MAX(Price) as maxprice from Products group by Manufacturer) price
+	on 
+		manf.Manufacturer = price.Manufacturer
+		and 
+		manf.Price = price.maxprice;
 
 -- 1.17 Add a new product: Loudspeakers, $70, manufacturer 2.
 INSERT INTO Products VALUES (11, "Loudspeakers", 70, 2);

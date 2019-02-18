@@ -1,5 +1,8 @@
 -- https://en.wikibooks.org/wiki/SQL_Exercises/Movie_theatres
 
+drop table if exists MovieTheaters;
+drop table if exists Movies;
+
 CREATE TABLE Movies (
   Code INTEGER PRIMARY KEY,
   Title VARCHAR(255) NOT NULL,

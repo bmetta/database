@@ -1,6 +1,9 @@
 -- The Warehouse
 -- lINK: https://en.wikibooks.org/wiki/SQL_Exercises/The_warehouse
 
+drop table Boxes;
+drop table Warehouses;
+
 CREATE TABLE Warehouses (
    Code INTEGER NOT NULL,
    Location VARCHAR(255) NOT NULL ,
@@ -16,7 +19,7 @@ CREATE TABLE Boxes (
     FOREIGN KEY (Warehouse) REFERENCES Warehouses(Code)
  ) ENGINE=INNODB;
  
-  INSERT INTO Warehouses(Code,Location,Capacity) VALUES(1,'Chicago',3);
+ INSERT INTO Warehouses(Code,Location,Capacity) VALUES(1,'Chicago',3);
  INSERT INTO Warehouses(Code,Location,Capacity) VALUES(2,'Chicago',4);
  INSERT INTO Warehouses(Code,Location,Capacity) VALUES(3,'New York',7);
  INSERT INTO Warehouses(Code,Location,Capacity) VALUES(4,'Los Angeles',2);

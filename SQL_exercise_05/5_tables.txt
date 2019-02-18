@@ -1,0 +1,33 @@
+mysql> select * from Pieces;
++------+----------+
+| Code | Name     |
++------+----------+
+|    1 | Sprocket |
+|    2 | Screw    |
+|    3 | Nut      |
+|    4 | Bolt     |
++------+----------+
+
+mysql> select * from Providers;
++------+----------------------+
+| Code | Name                 |
++------+----------------------+
+| HAL  | Clarke Enterprises   |
+| RBT  | Susan Calvin Corp.   |
+| TNBC | Skellington Supplies |
++------+----------------------+
+
+mysql> select * from Provides;
++-------+----------+-------+
+| Piece | Provider | Price |
++-------+----------+-------+
+|     1 | HAL      |    10 |
+|     1 | RBT      |    15 |
+|     2 | HAL      |    20 |
+|     2 | RBT      |    15 |
+|     2 | TNBC     |    14 |
+|     3 | RBT      |    50 |
+|     3 | TNBC     |    45 |
+|     4 | HAL      |     5 |
+|     4 | RBT      |     7 |
++-------+----------+-------+

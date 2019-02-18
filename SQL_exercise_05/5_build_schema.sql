@@ -1,21 +1,21 @@
 -- https://en.wikibooks.org/wiki/SQL_Exercises/Pieces_and_providers
 
+drop table if exists Provides;
+drop table if exists Pieces;
+drop table if exists Providers;
+
 CREATE TABLE Pieces (
  Code INTEGER PRIMARY KEY NOT NULL,
  Name TEXT NOT NULL
  );
 CREATE TABLE Providers (
- Code VARCHAR(40) 
- PRIMARY KEY NOT NULL,  
+ Code VARCHAR(40) PRIMARY KEY NOT NULL,  
  Name TEXT NOT NULL 
  );
 CREATE TABLE Provides (
- Piece INTEGER, 
- FOREIGN KEY (Piece) REFERENCES Pieces(Code),
- Provider VARCHAR(40), 
- FOREIGN KEY (Provider) REFERENCES Providers(Code),  
- Price INTEGER NOT NULL,
- PRIMARY KEY(Piece, Provider) 
+ Piece INTEGER, FOREIGN KEY (Piece) REFERENCES Pieces(Code),
+ Provider VARCHAR(40), FOREIGN KEY (Provider) REFERENCES Providers(Code),  
+ Price INTEGER NOT NULL, PRIMARY KEY(Piece, Provider) 
  );
  
 -- alternative one for SQLite

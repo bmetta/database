@@ -1,5 +1,13 @@
 -- https://en.wikibooks.org/wiki/SQL_Exercises/Planet_Express
 
+drop table if exists Package;
+drop table if exists Shipment;
+drop table if exists Client;
+
+drop table if exists Has_Clearance;
+drop table if exists Employee;
+drop table if exists Planet;
+
 CREATE TABLE Employee (
   EmployeeID INTEGER PRIMARY KEY,
   Name VARCHAR(255) NOT NULL,
