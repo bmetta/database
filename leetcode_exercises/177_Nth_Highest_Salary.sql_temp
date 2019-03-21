@@ -1,0 +1,19 @@
+drop table if exists Employee;
+create table if not exists Employee(id int, salary int);
+Truncate table Employee;
+insert into Employee (id, salary) values ('1', '100');
+insert into Employee (id, salary) values ('2', '200');
+insert into Employee (id, salary) values ('3', '300');
+insert into Employee (id, salary) values ('4', '400');
+
+select * from Employee;
+
+drop procedure if exists getNthHighestSalary;
+delimiter //
+CREATE PROCEDURE getNthHighestSalary() 
+BEGIN
+  select distinct salary from Employee;
+END//
+delimiter ;
+
+call getNthHighestSalary()
